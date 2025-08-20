@@ -15,9 +15,9 @@ $password = "";
 // Create connection
 $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
-if ($conn == true) {
-    echo "connected";
-} else {
-    echo "not connected";
-}
+//f ($conn == true) {
+//    echo "connected";
+//} else {
+//    echo "not connected";
+//}
 ?>
