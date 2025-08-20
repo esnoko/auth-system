@@ -1,0 +1,23 @@
+<?php
+
+//host
+$host = "localhost";
+
+//dbname
+$dbname = "auth_system";
+
+//username
+$username = "root";
+
+//password
+$password = "";
+
+// Create connection
+$conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+
+if ($conn == true) {
+    echo "connected";
+} else {
+    echo "not connected";
+}
+?>
