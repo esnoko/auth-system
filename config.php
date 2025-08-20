@@ -4,7 +4,7 @@
 $host = "localhost";
 
 //dbname
-$dbname = "auth_system";
+$dbname = "auth-system";
 
 //username
 $username = "root";
