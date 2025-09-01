@@ -1,7 +1,20 @@
 <?php require "includes/header.php"; ?>
 <?php require "config.php"; ?>
 
-<?php ?>
+<?php 
+     // Check the submission
+
+     // Take the data and do query
+
+     // Excecute the query
+
+     // Fetch the data
+
+     // Check for row count
+
+     // And use the paasword_verify function
+
+?>
 <main class="form-signin w-50 m-auto">
     <form>
         <h1 class="h3 mt-5 fw-normal text-center">Please Login</h1>
