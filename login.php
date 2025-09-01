@@ -15,7 +15,25 @@
      // And use the paasword_verify function
 
      if(isset($_POST['submit'])) {
-       
+       IF($_POST['email'] == '' OR $_POST['password'] == '') {
+           echo "<div class='alert alert-danger'>Please fill in all fields</div>";
+       } else {
+           $email = $_POST['email'];
+           $password = $_POST['password'];
+           // Fetch from database
+           $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
+           $stmt->execute([$email]);
+           $user = $stmt->fetch();
+           if($user) {
+               if(password_verify($password, $user['mypassword'])) {
+                   echo "<div class='alert alert-success'>Login successful!</div>";
+               } else {
+                   echo "<div class='alert alert-danger'>Incorrect password.</div>";
+               }
+           } else {
+               echo "<div class='alert alert-danger'>No user found with that email.</div>";
+           }
+       }
       }
 
 ?>
