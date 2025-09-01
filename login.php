@@ -15,19 +15,7 @@
      // And use the paasword_verify function
 
      if(isset($_POST['submit'])) {
-        IF($_POST['email'] == '' OR $_POST['username'] == '' OR $_POST['password'] == '') {
-            echo "<div class='alert alert-danger'>Please fill in all fields</div>";
-        } else {
-            $email = $_POST['email'];
-            $username = $_POST['username'];
-            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);            // Insert into database
-            $stmt = $conn->prepare("INSERT INTO users (email, username, mypassword) VALUES (?, ?, ?)");
-            if($stmt->execute([$email, $username, $password])) {
-                echo "<div class='alert alert-success'>Registration successful!</div>";
-            } else {
-                echo "<div class='alert alert-danger'>Registration failed. Please try again.</div>";
-            }
-        }
+       
       }
 
 ?>
