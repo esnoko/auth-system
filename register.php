@@ -8,10 +8,8 @@
         } else {
             $email = $_POST['email'];
             $username = $_POST['username'];
-            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-            // Insert into database
-            $stmt = $conn->prepare("INSERT INTO users (email, username, password) VALUES (?, ?, ?)");
+            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);            // Insert into database
+            $stmt = $conn->prepare("INSERT INTO users (email, username, mypassword) VALUES (?, ?, ?)");
             if($stmt->execute([$email, $username, $password])) {
                 echo "<div class='alert alert-success'>Registration successful!</div>";
             } else {
