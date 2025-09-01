@@ -1,5 +1,7 @@
 <?php require "includes/header.php"; ?>
+<?php require "config.php"; ?>
 
+<?php ?>
 <main class="form-signin w-50 m-auto">
     <form>
         <h1 class="h3 mt-5 fw-normal text-center">Please Login</h1>
